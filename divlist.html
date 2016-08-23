@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="utf-8" />
+<script type="text/javascript" src="lib/air/AIRAliases.js"></script>
+<script type="text/javascript" src="lib/js/divlist.js"></script>
+<title>层信息</title>
+<style type="text/css">
+body {
+padding: 10px;
+font-family: Arial, Helvetica, Tahoma, sans-serif;
+font-size: 12px
+}
+input{
+font-size: 12px;
+margin-top: 10px;
+font-weight: bold;
+}
+table{
+width:100%;
+border-collapse:collapse;
+}
+td{
+text-align:center;
+}
+.div-dnr{
+background-color:#D9B27D;
+}
+.div-dnr-now{
+background-color:#85C2FF;
+}
+.div-dnr:hover{
+background-color:#DEDEDE;
+}
+</style>
+</head>
+<body onload="onload();">
+    <table class="stock_table">
+        <caption>
+            层信息表
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">
+                    层名
+                </th>
+                <th scope="col">
+                    宽度
+                </th>
+                <th scope="col">
+                    高度
+                </th>
+                <th scope="col">
+                    水平位置
+                </th>
+                <th scope="col">
+                    垂直位置
+                </th>
+                <th scope="col">
+           输出宽
+                </th>
+                <th scope="col">
+           输出高
+                </th>
+                <th scope="col" colspan="2">
+                    操作
+                </th>
+            </tr>
+        </thead>
+        <tbody id="div_list">
+        </tbody>
+    </table>
+  <input type="hidden" id="input_div_id" />
+<button id="bt_reset">重置</button>
+<button id="bt_delall">清空</button>
+</body>
+</html>

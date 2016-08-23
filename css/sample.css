@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+body{overflow:hidden;padding:6px;font-family:Arial,Helvetica,Tahoma,sans-serif;font-size:14px }
+li{margin-bottom:14px }
+input{font-size:12px;margin-top:10px;font-weight:bold;}
+fieldset{clear:both;margin-top:10px;padding-top:10px;border-left-style:none;border-right-style:none;border-bottom-style:none;border-top:2px solid #9eb1aa;}
+.hint{color:#FF0000;text-indent:15px;}
+#div_image_view{position:relative;height:99.5%;padding:0;overflow:auto;border:1px solid #000000;background-color:#555555;font-size:0;line-height:0;}
+#image_view{height:200px;}
+.div-drag{width:100%;height:100%;cursor:move;}
+.div-resize{width:8px;height:8px;background-color:#BF7F26;position:absolute;bottom:0;right:0;cursor:se-resize;}
+.div-dnr,.div-dnr-now{position:absolute;background-color:#BF7F26;opacity:0.6;}
+.div-dnr-now{background-color:#3399FF;}
+.div-dnr:hover{background-color:#1D5790;}
+#input_bg_path{width:15em;}
+.nonce-div-info,.save-css,.pre-css,.op-div-info{position:absolute;z-index:20000;padding:10px;border:1px solid #15A4B1;background-color:#FFFFFF;}
+.nonce-div-info button{width:auto;height:auto;}
+.list-button-op{margin-top:10px;padding-top:10px;}
+.list-button-op button{float:left;width:4em;height:3em;margin-right:10px;}
+.save-css legend,.pre-css legend{padding:2px;background-color:#FFFFFF;border:1px solid #15A4B1;}
+.save-css{top:50%;left:50%;width:80%;height:220px;margin:-45% 0 0 -40%;}
+.pre-css{top:50%;left:50%;width:80%;height:73%;margin:-45% 0 0 -40%;}
+#div_view_css{width:591px;height:80%;overflow:auto;padding:10px 3%;word-break:normal;word-wrap:break-word;}
+#input_bg_path,#textarea_gb_class{width:100%;}
+#textarea_gb_class{border-color:#C0C0C0;}
+#input_div_margin{width:3em;}
+#input_div_width,#input_div_height,#input_div_left,#input_div_top{width:5em;}
+#input_copy_pyl{width:3em;}
+#button_copy_top{position:absolute;top:0;left:30px;}
+#button_copy_bottom{position:absolute;bottom:0;left:30px;}
+#button_copy_left{position:absolute;top:30px;left:0;}
+#button_copy_right{position:absolute;top:30px;left:60px;}
+#input_div_name{width:113px;}
+#hint_txt{display:none;position:absolute;z-index:99999;top:50%;left:50%;width:260px;height:38px;margin-left:-130px;margin-top:-20px;padding:4px;border:2px solid #04b338;background-color:#FFFFFF;}

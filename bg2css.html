@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="utf-8" />
+<title>CSS Sprites 样式生成工具 v3.2.1</title>
+<link href="css/sample.css" rel="stylesheet" type="text/css" />
+<script type="application/x-shockwave-flash" src="lib/air/applicationupdater_ui.swf"></script>
+<script type="application/x-shockwave-flash" src="lib/air/library.swf"></script>
+<script type="text/javascript" src="lib/js/AIRMenuBuilder.js"></script>
+<script type="text/javascript" src="lib/air/AIRAliases.js"></script>
+<script type="text/javascript" src="lib/js/main.js"></script>
+</head>
+<body onLoad="doLoad();" onkeydown="keyDown();" onresize="resetDivXY();checkxy('nonce_div');">
+<div id="div_image_view" onDragOver="doOver(event);" onDrop="doDrop(event);" onselectstart="return false;"><div id="div_image"> <img id="image_view" ondragstart="return false;" src="" /> </div></div>
+<!--S 操作区 -->
+<div id="op_div" class="op-div-info" style="display:block;bottom:26px;height:30px;"><button onclick="showhide('op_div');" style="position:absolute;right:0;top:-15px;">X</button>
+  <div> 图片缩放：
+    <button id="bt_x1" onClick="image_x(1)" disabled="true">X1</button>
+    <button id="bt_x2" onClick="image_x(2)" disabled="true">X2</button>
+    <button id="bt_x4" onClick="image_x(4)" disabled="true">X4</button>
+    <button id="bt_x6" onClick="image_x(6)" disabled="true">X6</button>
+    | 更换背景色：
+    <button id="bt_color_1" onClick="image_color('000000')" disabled="true">黑</button>
+    <button id="bt_color_2" onClick="image_color('FFFFFF')" disabled="true">白</button>
+    <button id="bt_color_3" onClick="image_color('386D9E')" disabled="true">蓝</button>
+    |
+    边界留白：
+      <input type="text" id="input_div_margin" value="0" onKeyPress="return event.keyCode>=48&&event.keyCode<=57||event.keyCode==46" />
+      px
+    <button id="button_div_margin_edit" disabled="true">保存修改</button>
+  </div>
+</div>
+<!--E 操作区 -->
+<!--S 当前层信息层 -->
+<fieldset id="nonce_div" class="nonce-div-info" style="display:none;width:310px;height:217px;top:169px;left:450px;">
+  <div style="margin:-10px -10px 0;height:30px;background-color:#CCCCCC;" onMouseDown="startDrag(this);" onMouseMove="drag(event);" onMouseUp="stopDrag(event);">
+    <button onclick="showhide('nonce_div');" style="float:right;">X</button>
+  </div>
+  <input type="hidden" id="input_div_id" />
+  <div style="display:block;" id="tab_a">
+    类名：.
+      <input type="text" id="input_div_name" />
+	  <label>
+      <input type="checkbox" id="checkbox_copy_div_class" checked="checked" disabled="true" />
+      复制类名</label>
+      <br />
+    宽：
+      <input type="text" id="input_div_width" onKeyPress="return event.keyCode>=48&&event.keyCode<=57||event.keyCode==46" />
+      px
+    <button id="button_div_copy_width" disabled="trun">复制</button>
+	<label>
+      <input type="checkbox" id="checkbox_copy_div_width" checked="checked" disabled="true" />
+      复制宽</label>
+	<label>
+      <input type="checkbox" id="checkbox_show_div_width" checked="checked" disabled="true" />
+      输出宽</label>
+    <br />
+    高：
+      <input type="text" id="input_div_height" onKeyPress="return event.keyCode>=48&&event.keyCode<=57||event.keyCode==46" />
+      px
+    <button id="button_div_copy_height" disabled="trun">复制</button>
+	<label>
+      <input type="checkbox" id="checkbox_copy_div_height" checked="checked" disabled="true" />
+      复制高</label>
+	<label>
+      <input type="checkbox" id="checkbox_show_div_height" checked="checked" disabled="true" />
+      输出高</label>
+    <br />
+    左：
+      <input type="text" id="input_div_left" onKeyPress="return event.keyCode>=48&&event.keyCode<=57||event.keyCode==46" />
+      px
+    <button id="button_div_copy_left" disabled="trun">复制</button> <button id="button_div_copy_wh">复制当前大小</button>
+    <br />
+    顶：
+      <input type="text" id="input_div_top" onKeyPress="return event.keyCode>=48&&event.keyCode<=57||event.keyCode==46" />
+      px
+    <button id="button_div_copy_top" disabled="trun">复制</button> <button id="button_div_copy_xy">复制当前位置</button>
+  	<div style="margin-top:5px;">
+    	<button id="button_div_edit" disabled="trun" style="margin:0 4.5em 0 2em;">保存修改</button>
+		<button id="button_div_copy" disabled="trun">复制当前样式</button>
+		<a href="#" onclick="showhide('tab_b');showhide('tab_a');">更多</a>
+  	</div>
+  </div>
+  <div style="display:none;" id="tab_b">
+	<div style="margin-bottom:53px;">
+    <label>以偏移量：
+      <input type="text" id="input_copy_pyl" disabled="trun" value="50" onKeyPress="return event.keyCode>=48&&event.keyCode<=57||event.keyCode==46" />
+      px 复制</label>
+	  <div style="position:relative;left:35%;top:20px;width:90px;height:90px;">
+    	<button id="button_copy_top" disabled="true">上</button>
+    	<button id="button_copy_bottom" disabled="true">下</button>
+    	<button id="button_copy_left" disabled="true">左</button>
+    	<button id="button_copy_right" disabled="true">右</button>
+	  </div>
+    </div>
+    <button id="button_div_del" disabled="trun">删除层</button>
+	<a style="position:absolute;right:18px;bottom:10px;" href="#" onclick="showhide('tab_b');showhide('tab_a');">返回</a>
+  </div>
+</fieldset>
+<!--E 当前层信息层 -->
+<!--S 保存样式层 -->
+<fieldset id="save_css_div" class="save-css" style="display:none;">
+  <legend> 生成样式 </legend><button onclick="showhide('save_css_div');" style="position:absolute;right:0;top:-5px;">X</button>
+  <label> 更改样式图片地址（用于生成样式）：
+    <input id="input_bg_path" type="text" />
+  </label>
+  更改公共样式（用于生成样式）：
+  <textarea id="textarea_gb_class" cols="50" rows="3"></textarea>
+  <div>
+  <label>
+    <input type="radio" id="radio_show_divwh" name="radio_show" checked="checked" onclick="showhide('set_show_allwh','false')" />
+    应用单独层的宽高显示定义 </label>
+  <label>
+    <input type="radio" id="radio_show_allwh" name="radio_show" onclick="showhide('set_show_allwh','true')" />
+    应用统一的宽高显示定义 </label>
+	</div>
+	<div id="set_show_allwh" style="display:none;">
+  <label>
+    <input type="checkbox" id="checkbox_show_width" checked="checked" disabled="true" />
+    输出宽 </label>
+  <label>
+    <input type="checkbox" id="checkbox_show_height" checked="checked" disabled="true" />
+    输出高 </label>
+	</div>
+  <button id="bt_view_css" disabled="true">样式预览</button>
+</fieldset>
+<!--E 保存样式层 -->
+<!--E 样式预览层 -->
+<fieldset id="pre_css_div" class="pre-css" style="display:none;">
+  <legend> 样式预览 </legend><button onclick="showhide('pre_css_div');" style="position:absolute;right:0;top:-5px;">X</button>
+  <button id="bt_copy_css" disabled="true">复制样式</button>
+  <div id="div_view_css"></div>
+</fieldset>
+<!--E 样式预览层 -->
+<div id="hint_txt">45</div>
+<script type="text/javascript" src="lib/js/UIUpdater.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="utf-8" />
+<title>关于 CSS Sprites 样式生成工具</title>
+<style type="text/css">
+    body {
+        padding: 10px;
+        font-family: Arial, Helvetica, Tahoma, sans-serif;
+        font-size: 12px
+    }
+</style>
+<script type="text/javascript" src="lib/air/AIRAliases.js"></script>
+ <script type="text/javascript">
+	function openInBrowser(url) {
+		air.navigateToURL( new air.URLRequest(url)); 
+	}
+</script>
+</head>
+<body>
+<h1>CSS Sprites 样式生成工具</h1>
+<h2>简介</h2>
+<p>程序名称：CSS Sprites 样式生成工具(bg2css)</p>
+<p>主要功能：方便使用CSS Sprites时对图片生成样式</p>
+<p>&copy; 2009 by <a href="#" onclick="openInBrowser('http://www.cssforest.org/blog/index.php?s=about')">GhostZhang</a></p>
+<p>官方地址：<a href="#" onclick="openInBrowser('http://www.cssforest.org/blog/index.php?id=129')">http://www.cssforest.org/blog/index.php?id=129</a></p>
+<p>帮助文档：<a href="#" onclick="openInBrowser('http://www.cssforest.org/AIR/bg2css/help.html')">http://www.cssforest.org/AIR/bg2css/help.html</a></p>
+<h2>版本信息</h2>
+<p>bg2css v3.1.1 2009-8-1<br />
++‘选中层时显示“当前层信息”’为默认选中<br />
+(fix)当前层激活状态不正确</p>
+<p>bg2css v3.1 2009-8-1<br />
+(fix)样式输出格式不统一<br />
+(fix)当图片太小是层大小判定错误<br />
+(fix)读取有边距的记录时层位置出错</p>
+<p>bg2css v3.0 2009-6-16<br />
++单独定义层的输出设置<br />
++当前信息层显示设置<br />
++更新所有层信息窗<br />
+(fix)新建层时不激活<br />
+(fix)读取设置后图片不能缩放<br />
+(fix)操作界面布局</p>
+<p>bg2css v2.3 2009-6-2<br />
++图片缩放增加快捷键<br />
++新的程序图标<br />
+(fix)当前信息层会被层挡住</p>
+<p>bg2css v2.2 2009-5-27<br />
++优化操作界面，操作区扩展到整个窗口<br />
++程序菜单<br />
++右键菜单<br />
+(fix)数字输入框内容不容易选中</p>
+<p>bg2css v2.1 2009-5-20<br />
++窗口改变时保持当前层在窗口中<br />
+(fix)移动当前层信息框时当前层变灰<br />
+(fix)放大后载入新图层没有初始化</p>
+<p>bg2css v2.0 2009-5-12<br />
++优化操作界面<br />
++放大时定位到当前层位置<br />
++图片放大不消锯齿<br />
++图片放大6倍（用于原图过小的情况，大图片慎用）<br />
+(fix)图片放大后添加层再缩小信息出错</p>
+<p>bg2css v1.9.5 2009-5-2<br />
+(fix)保存时文件不能替换</p>
+<p>bg2css v1.9.4 2009-5-2<br />
++自定义保存路径<br />
++单独复制宽、高、X坐标、Y坐标<br />
++复制当前样式时类名可选择<br />
+(fix)修改默认层大小<br />
+(fix)拖入文件时检查类型<br />
+(fix)"关于"里的链接在浏览器窗口打开</p>
+<p>bg2css v1.9.3 2009-4-14<br />
++文件保存时覆盖提示<br />
+(fix)修改图片拖动响应区域</p>
+<p>bg2css v1.9.2 2009-4-13<br />
++图片背景色可改<br />
++快捷键删除层<br />
++拖动更改图片</p>
+<p>bg2css v1.9.1 2009-4-12<br />
+(fix)支持中文路径</p>
+<p>bg2css v1.9.0 2009-4-12<br />
++复制当前层<br />
+(fix)读取设置后再保存出错<br />
+(fix)修改了部分界面</p>
+<p>bg2css v1.8.2 2009-4-10<br />
++公共样式部分可编辑<br />
+(fix)修改了部分界面<br />
+保存的设置文件增加一个项，请在之前保存的xml里的“imginfo”节点下手动增加一个“gbstyle”节点，值为“”.</p>
+<p>bg2css v1.8.1 2009-4-9<br />
++一定范围的负边界<br />
++复制选中层的样式<br />
+(fix)输出0时的显示<br />
+保存的设置文件增加一个项，请在之前保存的xml里的“imginfo”节点下手动增加一个“margin”节点，值为“0”.</p>
+<p>bg2css v1.8.0 2009-4-7<br />
++复制样式<br />
++层列表，以方便管理</p>
+<p>bg2css v1.7.0 2009-4-1<br />
++保存层位置信息</p>
+<p>bg2css v1.6.0 2009-3-27<br />
++边界验证<br />
+(fix)修改类名后放大失效</p>
+<p>bg2css v1.5.1 2009-3-26<br />
++图片放大培数可改</p>
+<p>bg2css v1.5.0 2009-3-25<br />
++图片放大预览<br />
+(fix)空值无验证</p>
+<p>bg2css v1.4.1 2009-3-21<br />
++支持快捷键<br />
++在线更新<br />
+(fix)添加层时有bug：双负数<br />
+(fix)窗口滚动影响微调<br />
+(fix)值为0时输出为&quot;-0px&quot;</p>
+<p>bg2css v1.3 2009-3-20<br />
++输出样式时可选是否输出宽高<br />
+(fix)生成样式时最后一个类删除后生成有问题<br />
+(fix)样式路径自定义</p>
+<p>bg2css v1.2 2009-3-19<br />
++双击添加层<br />
++层位置和大小微调</p>
+<p>bg2css v1.1 2009-3-18<br />
++修改类名<br />
++修改层位置、大小<br />
++重置层<br />
++保存成样式文件</p>
+<p>bg2css v1.0 2009-3-17<br />
++添加、删除层<br />
++拖动层、修改层大小<br />
++显示层相关信息<br />
++生成样式<br />
++当前层样式</p>
+</body>
+</html>
