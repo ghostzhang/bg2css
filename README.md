@@ -2,6 +2,17 @@
 
 CSS Sprites 样式生成工具
 
+## 使用说明
+
+1. 运行软件
+2. 将要处理的图片拖入界面或 \<kbd\>command+o\</kbd\>
+3. 双击图片上的任意位置，会得到一个蓝色的区域，区域可移动位置，按住右下角可改变区域的大小
+
+## 安装说明
+
+1. 先安装[Adobe Air](http://get.adobe.com/cn/air/)运行环境
+2. 下载安装最新版的[bg2css.air](https://github.com/ghostzhang/bg2css/releases)
+
 ## 版本信息
 
 bg2css v3.2.1 2010-2-8
