@@ -20,10 +20,10 @@
 	<filename>bg2css</filename>
 
 	<!-- The name that is displayed in the AIR application installer. Optional. -->
-	<name>CSS Sprites 样式生成工具 v3.2.1</name>
+	<name>CSS Sprites 样式生成工具 v3.2.2</name>
 
 	<!-- An application version designator (such as "v1", "2.5", or "Alpha 1"). Required. -->
-	<version>3.2.1</version>
+	<version>3.2.2</version>
 
 	<!-- Description, displayed in the AIR application installer. Optional. -->
 	<description>CSS Sprites 样式生成工具</description>
@@ -37,7 +37,7 @@
 		<content>bg2css.html</content>
 		
 		<!-- The title of the main window. Optional. -->
-		<title>CSS Sprites 样式生成工具 v3.2.1</title>
+		<title>CSS Sprites 样式生成工具 v3.2.2</title>
 
 		<!-- The type of system chrome to use (either "standard" or "none"). Optional. Default standard. -->
 		<systemChrome>standard</systemChrome>
