@@ -16,7 +16,7 @@
 		th {
 			padding: 10px;
 			font-family: Arial, Helvetica, Tahoma, sans-serif;
-			font-size: 12px
+			font-size: 12px;
 		}
 
 		h1 {
@@ -26,20 +26,28 @@
 		table {
 			width: 100%;
 			margin: 10px 0;
+			border-collapse: collapse;
+		}
+
+		table,
+		td,
+		th {
+			border: 1px solid #a8a8a8;
 		}
 	</style>
 </head>
 
 <body>
 	<h1>CSS Sprites 样式生成工具 快捷键</h1>
-	<table border="1">
+	<table>
 		<caption>
 			菜单快捷键列表
 		</caption>
 		<thead>
 			<tr>
 				<th>名称</th>
-				<th>快捷键</th>
+				<th>快捷键(win)</th>
+				<th>快捷键(mac)</th>
 				<th>说明</th>
 			</tr>
 		</thead>
@@ -49,6 +57,8 @@
 				</td>
 				<td>Ctrl + O
 				</td>
+				<td>command + O
+				</td>
 				<td>打开要操作的图片。
 				</td>
 			</tr>
@@ -56,6 +66,8 @@
 				<td>更新图片
 				</td>
 				<td>F5
+				</td>
+				<td>无
 				</td>
 				<td>更新当前图片文件。
 				</td>
@@ -65,6 +77,8 @@
 				</td>
 				<td>Ctrl + Shift + O
 				</td>
+				<td>command + Shift + O
+				</td>
 				<td>打开之前保存的定义文件。
 				</td>
 			</tr>
@@ -72,6 +86,8 @@
 				<td>保存当前定义
 				</td>
 				<td>Ctrl + S
+				</td>
+				<td>command + S
 				</td>
 				<td>保存当前的定义到文件。
 				</td>
@@ -81,6 +97,8 @@
 				</td>
 				<td>Ctrl + N
 				</td>
+				<td> command + N
+				</td>
 				<td>显示｜隐藏当前层的信息面板。
 				</td>
 			</tr>
@@ -88,6 +106,8 @@
 				<td>所有层信息
 				</td>
 				<td>Ctrl + Shift + N
+				</td>
+				<td>无
 				</td>
 				<td>打当前层的信息窗口。
 				</td>
@@ -97,6 +117,8 @@
 				</td>
 				<td>Ctrl + M
 				</td>
+				<td>无
+				</td>
 				<td>显示｜隐藏显示区的定义面板。
 				</td>
 			</tr>
@@ -104,6 +126,8 @@
 				<td>生成样式
 				</td>
 				<td>Ctrl + P
+				</td>
+				<td>command + P
 				</td>
 				<td>显示｜隐藏生成样式的定义面板。
 				</td>
@@ -113,19 +137,22 @@
 				</td>
 				<td>Ctrl + Shift + P
 				</td>
+				<td>command + Shift + P
+				</td>
 				<td>显示｜隐藏样式预览面板。
 				</td>
 			</tr>
 		</tbody>
 	</table>
-	<table border="1">
+	<table>
 		<caption>
 			图片操作快捷键列表
 		</caption>
 		<thead>
 			<tr>
 				<th>名称</th>
-				<th>快捷键</th>
+				<th>快捷键(win)</th>
+				<th>快捷键(mac)</th>
 				<th>说明</th>
 			</tr>
 		</thead>
@@ -133,7 +160,9 @@
 			<tr>
 				<td rowspan="4">图片缩放
 				</td>
-				<td>Ctrl + 0<br />Ctrl + 1
+				<td>Ctrl + 0
+				</td>
+				<td>cntrol + command + 0
 				</td>
 				<td>图片100%显示。
 				</td>
@@ -141,11 +170,15 @@
 			<tr>
 				<td>Ctrl + 2
 				</td>
+				<td>cntrol + command + 2
+				</td>
 				<td>图片200%显示。
 				</td>
 			</tr>
 			<tr>
 				<td>Ctrl + 4
+				</td>
+				<td>cntrol + command + 4
 				</td>
 				<td>图片400%显示。
 				</td>
@@ -153,20 +186,23 @@
 			<tr>
 				<td>Ctrl + 6
 				</td>
+				<td>cntrol + command + 6
+				</td>
 				<td>图片600%显示。
 				</td>
 			</tr>
 		</tbody>
 	</table>
 
-	<table border="1">
+	<table>
 		<caption>
 			当前层操作快捷键列表
 		</caption>
 		<thead>
 			<tr>
 				<th>名称</th>
-				<th>快捷键</th>
+				<th>快捷键(win)</th>
+				<th>快捷键(mac)</th>
 				<th>说明</th>
 			</tr>
 		</thead>
@@ -174,9 +210,11 @@
 			<tr>
 				<td>删除
 				</td>
-				<td>Delete | (fn + delete)
+				<td>Delete
 				</td>
-				<td>删除当前层。
+				<td>fn + delete
+				</td>
+				<td>删除当前层
 				</td>
 			</tr>
 			<tr>
@@ -184,25 +222,33 @@
 				</td>
 				<td>Ctrl + 向上方向键
 				</td>
-				<td>向上移动当前层的位置。
+				<td>cntrol + command + 向上方向键
+				</td>
+				<td>向上移动当前层的位置
 				</td>
 			</tr>
 			<tr>
 				<td>Ctrl + 向下方向键
 				</td>
-				<td>向下移动当前层的位置。
+				<td>cntrol + command + 向下方向键
+				</td>
+				<td>向下移动当前层的位置
 				</td>
 			</tr>
 			<tr>
 				<td>Ctrl + 向左方向键
 				</td>
-				<td>向左移动当前层的位置。
+				<td>cntrol + command + 向左方向键
+				</td>
+				<td>向左移动当前层的位置
 				</td>
 			</tr>
 			<tr>
 				<td>Ctrl + 向右方向键
 				</td>
-				<td>向右移动当前层的位置。
+				<td>cntrol + command + 向右方向键
+				</td>
+				<td>向右移动当前层的位置
 				</td>
 			</tr>
 			<tr>
@@ -210,25 +256,33 @@
 				</td>
 				<td>Ctrl + Shift + 向上方向键
 				</td>
-				<td>减少当前层的高度。
+				<td>cntrol + command + Shift + 向上方向键
+				</td>
+				<td>减少当前层的高度
 				</td>
 			</tr>
 			<tr>
 				<td>Ctrl + Shift + 向下方向键
 				</td>
-				<td>增加当前层的高度。
+				<td>cntrol + command + Shift + 向下方向键
+				</td>
+				<td>增加当前层的高度
 				</td>
 			</tr>
 			<tr>
 				<td>Ctrl + Shift + 向左方向键
 				</td>
-				<td>减少当前层的宽度。
+				<td>cntrol + command + Shift + 向左方向键
+				</td>
+				<td>减少当前层的宽度
 				</td>
 			</tr>
 			<tr>
 				<td>Ctrl + Shift + 向右方向键
 				</td>
-				<td>增加当前层的宽度。
+				<td>cntrol + command + Shift + 向右方向键
+				</td>
+				<td>增加当前层的宽度
 				</td>
 			</tr>
 		</tbody>
