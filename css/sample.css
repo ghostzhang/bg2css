@@ -18,7 +18,7 @@ fieldset{clear:both;margin-top:10px;padding-top:10px;border-left-style:none;bord
 .list-button-op{margin-top:10px;padding-top:10px;}
 .list-button-op button{float:left;width:4em;height:3em;margin-right:10px;}
 .save-css legend,.pre-css legend{padding:2px;background-color:#FFFFFF;border:1px solid #15A4B1;}
-.save-css{top:50%;left:50%;width:80%;height:220px;margin:-45% 0 0 -40%;}
+.save-css{top:50%;left:50%;width:80%;min-height:220px;margin:-45% 0 0 -40%;}
 .pre-css{top:50%;left:50%;width:80%;height:73%;margin:-45% 0 0 -40%;}
 #div_view_css{width:591px;height:80%;overflow:auto;padding:10px 3%;word-break:normal;word-wrap:break-word;}
 #input_bg_path,#textarea_gb_class{width:100%;}
@@ -31,4 +31,4 @@ fieldset{clear:both;margin-top:10px;padding-top:10px;border-left-style:none;bord
 #button_copy_left{position:absolute;top:30px;left:0;}
 #button_copy_right{position:absolute;top:30px;left:60px;}
 #input_div_name{width:113px;}
-#hint_txt{display:none;position:absolute;z-index:99999;top:50%;left:50%;width:260px;height:38px;margin-left:-130px;margin-top:-20px;padding:4px;border:2px solid #04b338;background-color:#FFFFFF;}
+#hint_txt{display:none;position:absolute;z-index:99999;top:50%;left:50%;width:260px;min-height:2em;margin-left:-130px;margin-top:-20px;padding:4px;border:2px solid #04b338;background-color:#FFFFFF;}
